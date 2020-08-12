@@ -1,0 +1,38 @@
+package com.guodong;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+
+public class JMainPanel extends JPanel{
+	int unit;
+	public JMainPanel (int unit, int nBorder, int sBorder, int wBorder, int eBorder, 
+			Color mainBackground, Color cardBackground) {
+		this.unit = unit;
+		this.setLayout(new BorderLayout());
+		Border emptyBorder = BorderFactory.createEmptyBorder(nBorder, sBorder, wBorder, eBorder);
+		this.setBorder(emptyBorder);
+		this.setBackground(mainBackground);
+		
+		JPanel innerPanel = new JPanel();
+		innerPanel.setLayout(new GridLayout(2,0));
+		
+		JPanel leftCardPanel = new JPanel();
+		innerPanel.add(leftCardPanel);
+		leftCardPanel.setLocation(4*unit, 6*unit);
+		
+		JPanel midCardPanel = new JPanel();
+		innerPanel.add(midCardPanel);
+		midCardPanel.setLocation(4*unit, 6*unit);
+		
+		JPanel rightCardPanel = new JPanel();
+		innerPanel.add(rightCardPanel);
+		rightCardPanel.setLocation(4*unit, 6*unit);
+		
+	}
+	
+}

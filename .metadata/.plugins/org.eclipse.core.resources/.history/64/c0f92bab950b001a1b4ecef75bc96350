@@ -1,0 +1,22 @@
+package com.guodong;
+
+public class Model_Balance {
+	private int balance;
+	
+	public Model_Balance() {
+		this.balance = 100;	
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	public void update(int balance) {
+		
+	}
+	
+}

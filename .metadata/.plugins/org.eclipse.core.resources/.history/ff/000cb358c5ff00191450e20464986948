@@ -1,0 +1,13 @@
+package Ex7;
+
+import javax.swing.JFrame;
+
+public class TripleFilled extends JFrame {
+	public TripleFilled() {
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		new TripleFilled();
+	}
+}

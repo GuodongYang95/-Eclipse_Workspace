@@ -1,0 +1,6 @@
+
+public class CheeseDecorator extends BurgerDecorator{
+	public CheeseDecorator(Burger decoratedBurger) {
+		super(decoratedBurger);
+	}
+}

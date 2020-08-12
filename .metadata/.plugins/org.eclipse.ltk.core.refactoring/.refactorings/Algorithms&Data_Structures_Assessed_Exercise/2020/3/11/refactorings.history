@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;guodong.com.AssEx1_outline.java&apos; to &apos;AssEx1.java&apos;&#x0A;- Original project: &apos;Algorithms&amp;Data_Structures_Assessed_Exercise&apos;&#x0A;- Original element: &apos;guodong.com.AssEx1_outline.java&apos;&#x0A;- Renamed element: &apos;guodong.com.AssEx1.java&apos;" description="Rename compilation unit &apos;AssEx1_outline.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;guodong.com{AssEx1_outline.java" name="AssEx1.java" references="false" stamp="1584115344896" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+
+public class DecoratorTest {
+	public static void main(String[] args) {
+		Burger base = new PlainBurger();
+		System.out.println("Burger costs " + base.getPrice() + " and has " + base.getDescription());
+		
+		Burger cheese = new CheeseDecorator(new PlainBurger());
+		System.out.println("Burger costs " + cheese.getPrice() + " and has " + cheese.getDescription());
+		
+		Burger bacon = new BaconDecorator(new PlainBurger());
+		System.out.println("Burger costs " + bacon.getPrice() + " and has " + bacon.getDescription());
+	}
+}	

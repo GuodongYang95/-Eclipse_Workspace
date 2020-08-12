@@ -1,0 +1,21 @@
+package Ex7;
+
+import java.awt.Color;
+import java.awt.Panel;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class TripleFilled extends JFrame {
+	public TripleFilled(JPanel panel) {
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(panel);
+		this.setSize(900,900);
+		this.setLocation(100,100);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		TripleFilledPanel panel = new TripleFilledPanel(100, 300, 200, 400, 100, 120,111, 129, Color.black, Color.red, Color.yellow);
+		new TripleFilled(panel);
+	}
+}

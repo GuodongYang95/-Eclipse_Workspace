@@ -1,0 +1,26 @@
+package Ex7;
+
+import java.awt.Color;
+import java.awt.Panel;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+
+public class TripleFilled extends JFrame {
+	public TripleFilled(JPanel panel, int nBorder1, int wBorder1, int sBorder1, int eBorder1, Color fillColor1) {
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(panel);
+		this.setBackground(fillColor1);
+		Border emptyBorder = BorderFactory.createEmptyBorder(nBorder1, wBorder1, sBorder1, eBorder1);
+		
+		this.setSize(900,900);
+		this.setLocation(100,100);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+//		TripleFilledPanel panel = new TripleFilledPanel(100, 300, 200, 400, 100, 120,111, 129, Color.black, Color.red, Color.yellow);
+//		new TripleFilled(panel);
+	}
+}

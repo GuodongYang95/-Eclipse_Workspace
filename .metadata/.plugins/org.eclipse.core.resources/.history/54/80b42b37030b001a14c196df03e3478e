@@ -1,0 +1,110 @@
+package com.guodong;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+
+public class JMainPanel extends JPanel{
+	int unit;
+	int nBorder, wBorder, sBorder, eBorder;
+	private JLabel leftCard, midCard, rightCard, balanceLabel, resultsLabel, outcomeLabel;
+	private JButton spinButton, newGameButton;
+	public JMainPanel (int unit, Color cardBackground) {
+		this.unit = unit;
+		nBorder = unit;
+		wBorder = unit;
+		sBorder = unit;
+		eBorder = unit;
+		this.setLayout(new BorderLayout());
+		Border emptyBorder = BorderFactory.createEmptyBorder(nBorder, wBorder, sBorder, eBorder);
+		this.setBorder(emptyBorder);
+		
+		JPanel innerPanel = new JPanel();
+		innerPanel.setLayout(new GridLayout(2,1));
+		this.add(innerPanel);
+		
+		JPanel topInnerPanel = new JPanel();
+		innerPanel.add(topInnerPanel);
+		topInnerPanel.setLayout(new GridLayout(3,1));
+		
+		JPanel bottomInnerPanel = new JPanel();
+		innerPanel.add(bottomInnerPanel);
+		bottomInnerPanel.setLayout(new GridLayout(1,2));
+		
+		JPanel cardPanel = new JPanel();
+		bottomInnerPanel.add(cardPanel);
+		cardPanel.setLayout(new GridLayout(1,3, unit, unit));
+		
+		
+		JPanel buttonPanel = new JPanel();
+		bottomInnerPanel.add(buttonPanel);
+		buttonPanel.setLayout(new BorderLayout());
+		Border emptyBorder2 = BorderFactory.createEmptyBorder(nBorder, unit+wBorder, sBorder, unit+eBorder);
+		buttonPanel.setBorder(emptyBorder2);
+		
+		JPanel innerButtonPanel = new JPanel();
+		buttonPanel.add(innerButtonPanel);
+		innerButtonPanel.setLayout(new GridLayout(2,1));
+		
+		JPanel leftCardPanel = new JPanel();
+		leftCardPanel.setLayout(new BorderLayout());
+		cardPanel.add(leftCardPanel, BorderLayout.CENTER);
+
+		leftCard = new JLabel("King", JLabel.CENTER);
+		leftCard.setFont(new Font("Serif", Font.BOLD, 20));
+		leftCardPanel.add(leftCard);
+		leftCardPanel.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+		leftCardPanel.setBackground(cardBackground);
+		
+		
+		JPanel midCardPanel = new JPanel();
+		midCardPanel.setLayout(new BorderLayout());
+		cardPanel.add(midCardPanel, BorderLayout.CENTER);
+		
+		midCard = new JLabel("Queen", JLabel.CENTER);
+		midCard.setFont(new Font("Serif", Font.BOLD, 20));
+		midCardPanel.add(midCard);
+		midCardPanel.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+		midCardPanel.setBackground(cardBackground);
+		
+		JPanel rightCardPanel = new JPanel();
+		rightCardPanel.setLayout(new BorderLayout());
+		cardPanel.add(rightCardPanel, BorderLayout.CENTER);
+		
+		rightCard = new JLabel("Jack", JLabel.CENTER);
+		rightCard.setFont(new Font("Serif", Font.BOLD, 20));
+		rightCardPanel.add(rightCard);
+		rightCardPanel.setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.black));
+		rightCardPanel.setBackground(cardBackground);
+		
+		spinButton = new JButton("spin");
+		newGameButton = new JButton("new game");
+		newGameButton.setFont(new Font(getName(), Font.PLAIN, 20));
+		spinButton.setFont(new Font(getName(), Font.PLAIN, 20));
+		innerButtonPanel.add(spinButton);
+		innerButtonPanel.add(newGameButton);
+		
+		balanceLabel = new JLabel("balance is 100");
+		balanceLabel.setFont(new Font(getName(), Font.ITALIC, 16));
+		topInnerPanel.add(balanceLabel);
+		
+		resultsLabel = new JLabel("welcome!");
+		resultsLabel.setFont(new Font(getName(), Font.ITALIC, 16));
+		topInnerPanel.add(resultsLabel);
+		
+		outcomeLabel = new JLabel("");
+		outcomeLabel.setFont(new Font(getName(), Font.ITALIC, 16));
+		topInnerPanel.add(outcomeLabel);
+		
+		
+	}
+	
+}

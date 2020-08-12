@@ -1,0 +1,17 @@
+package com.guodong;
+
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.JPanel;
+
+public class JMainPanel extends JPanel{
+	public JMainPanel (int unit, int mBorderLength, int mBorderWidth, 
+			int inBottomBorderLength, int inBottomBorderWidth, 
+			int inTopBorderLength, int inTopBorderWidth,
+			Color mainBackground, Color cardBackground) {
+		this.setLayout(new GridLayout(2,0));
+		
+	}
+	
+}

@@ -1,0 +1,8 @@
+package com.guodong;
+
+public class Model_Balance {
+	private int balance;
+	public Model_Balance() {
+		this.balance = 100;
+	}
+}

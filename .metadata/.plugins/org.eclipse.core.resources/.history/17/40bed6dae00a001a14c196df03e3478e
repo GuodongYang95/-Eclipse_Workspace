@@ -1,0 +1,62 @@
+package com.guodong;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.border.Border;
+
+public class JMainPanel extends JPanel{
+	int unit;
+	private JButton spinButton, newGameButton;
+	public JMainPanel (int unit, int nBorder, int sBorder, int wBorder, int eBorder, 
+			Color mainBackground, Color cardBackground) {
+		this.unit = unit;
+		this.setLayout(new BorderLayout());
+		Border emptyBorder = BorderFactory.createEmptyBorder(nBorder, sBorder, wBorder, eBorder);
+		this.setBorder(emptyBorder);
+		this.setBackground(mainBackground);
+		
+		JPanel innerPanel = new JPanel();
+		innerPanel.setLayout(new GridLayout(2,0));
+		
+		JPanel topInnerPanel = new JPanel();
+		innerPanel.add(topInnerPanel, 1);
+		
+		JPanel bottomInnerPanel = new JPanel();
+		innerPanel.add(bottomInnerPanel, 2);
+		
+		JPanel leftCardPanel = new JPanel();
+		bottomInnerPanel.add(leftCardPanel);
+		leftCardPanel.setLocation(0, 1);
+		leftCardPanel.setSize(4*unit, 6*unit);
+		leftCardPanel.setBackground(cardBackground);
+		
+		JPanel midCardPanel = new JPanel();
+		bottomInnerPanel.add(midCardPanel);
+		midCardPanel.setLocation(5, 1);
+		midCardPanel.setLocation(4*unit, 6*unit);
+		midCardPanel.setBackground(cardBackground);
+		
+		JPanel rightCardPanel = new JPanel();
+		bottomInnerPanel.add(rightCardPanel);
+		rightCardPanel.setLocation(10, 1);
+		rightCardPanel.setLocation(4*unit, 6*unit);
+		rightCardPanel.setBackground(cardBackground);
+		
+		spinButton = new JButton("spin");
+		newGameButton = new JButton("new game");
+		bottomInnerPanel.add(spinButton, 2);
+		bottomInnerPanel.add(newGameButton, 2);
+		spinButton.setLocation(17, 2);
+		spinButton.setSize(7*unit, 2*unit);	
+		newGameButton.setLocation(17, 4);
+		newGameButton.setSize(7*unit, 2*unit);
+		
+		
+	}
+	
+}

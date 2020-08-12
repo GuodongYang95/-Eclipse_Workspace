@@ -1,0 +1,17 @@
+
+public class Course implements Comparable<Course>{
+	private String name;
+	private int numberOfStu;
+	
+	public @Override
+	public String toString() {
+		return name + numberOfStu;
+	}
+	
+	@Override
+	public int compareTo(Course o) {
+		// TODO 自动生成的方法存根
+		return 0;
+	}
+	
+}

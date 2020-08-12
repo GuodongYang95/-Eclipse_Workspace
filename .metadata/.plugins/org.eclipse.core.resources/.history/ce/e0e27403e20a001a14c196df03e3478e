@@ -1,0 +1,20 @@
+package com.guodong;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class FruitMachineViewer extends JFrame {
+	public FruitMachineViewer (JPanel panel) {
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(310,210);
+		this.add(panel);
+		this.setVisible(true);
+	}
+	public static void main(String[] args) {
+		JMainPanel panel = new JMainPanel(10, 20, 20, 10, 10, 
+				Color.gray, Color.yellow);
+		
+	}
+}

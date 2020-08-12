@@ -1,0 +1,20 @@
+package com.guodong;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+
+public class JMainPanel extends JPanel{
+	int unit;
+	public JMainPanel (int unit, int nBorder, int sBorder, int wBorder, int eBorder, 
+			Color mainBackground, Color cardBackground) {
+		this.unit = unit;
+		this.setLayout(new BorderLayout());
+		Border emptyBorder = BorderFactory.createEmptyBorder(nBorder, sBorder, wBorder, eBorder);
+		
+	}
+	
+}
